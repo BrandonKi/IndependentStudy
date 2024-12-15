@@ -1,0 +1,270 @@
+@book{ec,
+  author = {Torczon, Linda and Cooper, Keith},
+  title = {Engineering A Compiler},
+  year = {2007},
+  isbn = {012088478X},
+  publisher = {Morgan Kaufmann Publishers Inc.},
+  address = {San Francisco, CA, USA},
+  edition = {2nd}
+}
+
+@book{ssa,
+  author = {Rastello, Fabrice},
+  title = {SSA-based Compiler Design},
+  year = {2016},
+  isbn = {1441962018},
+  publisher = {Springer Publishing Company, Incorporated},
+  edition = {1st},
+  abstract = {The manner in which programs are represented in compilers has a large influence on the efficiency and effectiveness of the compiler. The Static Single Assignment (SSA) form is widely used in modern compilers, even at the code generation level, as it allows for simple yet efficient optimizations and analyses. This book offers the first comprehensive reference on SSA-based compilers. Special emphasis is put on the comparison of SSA-based techniques to their non-SSA counterparts.}
+}
+
+@unknown{dom,
+  author = {Cooper, Keith and Harvey, Timothy and Kennedy, Ken},
+  year = {2006},
+  month = {11},
+  pages = {},
+  title = {A Simple, Fast Dominance Algorithm},
+  journal = {Rice University, CS Technical Report 06-33870}
+}
+
+@article{cprop,
+  author = {Wegman, Mark N. and Zadeck, F. Kenneth},
+  title = {Constant propagation with conditional branches},
+  year = {1991},
+  issue_date = {April 1991},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {13},
+  number = {2},
+  issn = {0164-0925},
+  url = {https://doi.org/10.1145/103135.103136},
+  doi = {10.1145/103135.103136},
+  abstract = {Constant propagation is a well-known global flow analysis problem. The goal of constant propagation is to discover values that are constant on all possible executions of a program and to propagate these constant values as far foward through the program as possible. Expressions whose operands are all constants can be evaluated at compile time and the results propagated further. Using the algorithms presented in this paper can produce smaller and faster compiled programs. The same algorithms can be used for other kinds of analyses (e.g., type of determination). We present four algorithms in this paper, all conservitive in the sense that all constants may not be found, but each constant found is constant over all possible executions of the program. These algorithms are among the simplest, fastest, and most powerful global constant propagation algorithms known. We also present a new algorithm that performs a form of interprocedural data flow analysis in which aliasing information is gathered in conjunction with constant progagation. Several variants of this algorithm are considered.},
+  journal = {ACM Trans. Program. Lang. Syst.},
+  month = apr,
+  pages = {181-210},
+  numpages = {30},
+  keywords = {abstract interpretation, code optimization, constant propagation, control flow graph, interprocedural analysis, procedure integration, static single assignment form, type determination}
+}
+
+@online{llvmmeeting,
+  author    = "Javed Absar and Florian Hahn",
+  title     = "2017 LLVM Developers' Meeting: “Writing Great Machine Schedulers ”",
+  url       = "https://www.youtube.com/watch?v=brpomKUynEA",
+}
+
+@online{loopopts,
+  author    = "Stephen Chong",
+  title     = "CS153: Compilers Lecture 23: Loop Optimization",
+  url       = "https://groups.seas.harvard.edu/courses/cs153/2019fa/lectures/Lec23-Loop-optimization.pdf",
+}
+
+@inproceedings{polly,
+  author = {Pouchet, Louis-Noël and Größlinger, Armin and Simbürger, Andreas and Zheng, Hongbin and Grosser, Tobias},
+  year = {2011},
+  month = {01},
+  pages = {},
+  title = {Polly-polyhedral optimization in LLVM},
+  volume = {2011}
+}
+
+@inproceedings{eqsat-opt,
+  author = {Tate, Ross and Stepp, Michael and Tatlock, Zachary and Lerner, Sorin},
+  title = {Equality Saturation: a New Approach to Optimization},
+  booktitle = {{POPL} '09: Proceedings of the 36th annual {ACM} {SIGPLAN-SIGACT} symposium on Principles of Programming Languages},
+  year = {2009},
+  isbn = {978-1-60558-379-2},
+  pages = {264--276},
+  location = {Savannah, GA, USA},
+  doi = {http://doi.acm.org/10.1145/1480881.1480915},
+  publisher = {{ACM}},
+  address = {New York, NY, USA},
+  url = {http://www.cs.cornell.edu/~ross/publications/eqsat/}
+}
+
+@online{aegraphs,
+  author    = "Chris Fallin",
+  title     = "ægraphs: Acyclic E-graphs for Efficient Optimization in a Production Compiler",
+  url       = "https://cfallin.org/pubs/egraphs2023_aegraphs_slides.pdf",
+}
+
+@misc{optwithegraphs,
+  title={Automated Code Optimization with E-Graphs}, 
+  author={Alessandro Cheli},
+  year={2021},
+  eprint={2112.14714},
+  archivePrefix={arXiv},
+  primaryClass={cs.PL},
+  url={https://arxiv.org/abs/2112.14714}, 
+}
+
+@article{egg,
+  author = {Willsey, Max and Nandi, Chandrakana and Wang, Yisu Remy and Flatt, Oliver and Tatlock, Zachary and Panchekha, Pavel},
+  title = {egg: Fast and Extensible Equality Saturation},
+  year = {2021},
+  issue_date = {January 2021},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {5},
+  number = {POPL},
+  url = {https://doi.org/10.1145/3434304},
+  doi = {10.1145/3434304},
+  abstract = {An e-graph efficiently represents a congruence relation over many expressions. Although they were originally developed in the late 1970s for use in automated theorem provers, a more recent technique known as equality saturation repurposes e-graphs to implement state-of-the-art, rewrite-driven compiler optimizations and program synthesizers. However, e-graphs remain unspecialized for this newer use case. Equality saturation workloads exhibit distinct characteristics and often require ad-hoc e-graph extensions to incorporate transformations beyond purely syntactic rewrites.  This work contributes two techniques that make e-graphs fast and extensible, specializing them to equality saturation. A new amortized invariant restoration technique called rebuilding takes advantage of equality saturation's distinct workload, providing asymptotic speedups over current techniques in practice. A general mechanism called e-class analyses integrates domain-specific analyses into the e-graph, reducing the need for ad hoc manipulation.  We implemented these techniques in a new open-source library called egg. Our case studies on three previously published applications of equality saturation highlight how egg's performance and flexibility enable state-of-the-art results across diverse domains.},
+  journal = {Proc. ACM Program. Lang.},
+  month = jan,
+  articleno = {23},
+  numpages = {29},
+  keywords = {equality saturation, e-graphs}
+}
+
+@online{llvm,
+  author    = "",
+  title     = "The LLVM Compiler Infrastructure",
+  url       = "https://llvm.org/",
+}
+
+@online{pgo,
+  author    = "Visual CPP Team",
+  title     = "POGO",
+  url       = "https://devblogs.microsoft.com/cppblog/pogo/",
+}
+
+@inproceedings{son,
+  author = {Click, Cliff and Paleczny, Michael},
+  title = {A simple graph-based intermediate representation},
+  year = {1995},
+  isbn = {0897917545},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/202529.202534},
+  doi = {10.1145/202529.202534},
+  abstract = {We present a graph-based intermediate representation (IR) with simple semantics and a low-memory-cost C++ implementation. The IR uses a directed graph with labeled vertices and ordered inputs but unordered outputs. Vertices are labeled with opcodes, edges are unlabeled. We represent the CFG and basic blocks with the same vertex and edge structures. Each opcode is defined by a C++ class that encapsulates opcode-specific data and behavior. We use inheritance to abstract common opcode behavior, allowing new opcodes to be easily defined from old ones. The resulting IR is simple, fast and easy to use.},
+  booktitle = {Papers from the 1995 ACM SIGPLAN Workshop on Intermediate Representations},
+  pages = {35-49},
+  numpages = {15},
+  location = {San Francisco, California, USA},
+  series = {IR '95}
+}
+
+@online{simple,
+  author    = "Cliff Click",
+  title     = "Simple",
+  url       = "https://github.com/SeaOfNodes/Simple",
+}
+
+@article{rvsdg,
+  author = {Reissmann, Nico and Meyer, Jan Christian and Bahmann, Helge and Sj\"{a}lander, Magnus},
+  title = {RVSDG: An Intermediate Representation for Optimizing Compilers},
+  year = {2020},
+  issue_date = {November 2020},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {19},
+  number = {6},
+  issn = {1539-9087},
+  url = {https://doi.org/10.1145/3391902},
+  doi = {10.1145/3391902},
+  abstract = {Intermediate Representations (IRs) are central to optimizing compilers as the way the program is represented may enhance or limit analyses and transformations. Suitable IRs focus on exposing the most relevant information and establish invariants that different compiler passes can rely on. While control-flow centric IRs appear to be a natural fit for imperative programming languages, analyses required by compilers have increasingly shifted to understand data dependencies and work at multiple abstraction layers at the same time. This is partially evidenced in recent developments such as the Multi-Level Intermediate Representation (MLIR) proposed by Google. However, rigorous use of data flow centric IRs in general purpose compilers has not been evaluated for feasibility and usability as previous works provide no practical implementations.We present the Regionalized Value State Dependence Graph (RVSDG) IR for optimizing compilers. The RVSDG is a data flow centric IR where nodes represent computations, edges represent computational dependencies, and regions capture the hierarchical structure of programs. It represents programs in demand-dependence form, implicitly supports structured control flow, and models entire programs within a single IR. We provide a complete specification of the RVSDG, construction and destruction methods, as well as exemplify its utility by presenting Dead Node and Common Node Elimination optimizations. We implemented a prototype compiler and evaluate it in terms of performance, code size, compilation time, and representational overhead. Our results indicate that the RVSDG can serve as a competitive IR in optimizing compilers while reducing complexity.},
+  journal = {ACM Trans. Embed. Comput. Syst.},
+  month = dec,
+  articleno = {49},
+  numpages = {28},
+  keywords = {LLVM, Regionalized value state dependence graph (RVSDG), intermediate representation}
+}
+
+@inproceedings{10.1145/2384616.2384628,
+  author = {Kulkarni, Sameer and Cavazos, John},
+  title = {Mitigating the compiler optimization phase-ordering problem using machine learning},
+  year = {2012},
+  isbn = {9781450315616},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2384616.2384628},
+  doi = {10.1145/2384616.2384628},
+  abstract = {Today's compilers have a plethora of optimizations to choose from, and the correct choice of optimizations can have a significant impact on the performance of the code being optimized. Furthermore, choosing the correct order in which to apply those optimizations has been a long standing problem in compilation research. Each of these optimizations interacts with the code and in turn with all other optimizations in complicated ways. Traditional compilers typically apply the same set of optimization in a fixed order to all functions in a program, without regard the code being optimized.Understanding the interactions of optimizations is very important in determining a good solution to the phase-ordering problem. This paper develops a new approach that automatically selects good optimization orderings on a per method basis within a dynamic compiler. Our approach formulates the phase-ordering problem as a Markov process and uses a characterization of the current state of the code being optimized to creating a better solution to the phase ordering problem. Our technique uses neuro-evolution to construct an artificial neural network that is capable of predicting beneficial optimization ordering for a piece of code that is being optimized. We implemented our technique in Jikes RVM and achieved significant improvements on a set of standard Java benchmarks over a well-engineered fixed order.},
+  booktitle = {Proceedings of the ACM International Conference on Object Oriented Programming Systems Languages and Applications},
+  pages = {147–162},
+  numpages = {16},
+  keywords = {source code feature generation, phase ordering, neural networks, machine learning, jikes rvm, java, compiler optimization},
+  location = {Tucson, Arizona, USA},
+  series = {OOPSLA '12}
+}
+
+@article{phaseordering,
+  author = {Kulkarni, Sameer and Cavazos, John},
+  title = {Mitigating the compiler optimization phase-ordering problem using machine learning},
+  year = {2012},
+  issue_date = {October 2012},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {47},
+  number = {10},
+  issn = {0362-1340},
+  url = {https://doi.org/10.1145/2398857.2384628},
+  doi = {10.1145/2398857.2384628},
+  abstract = {Today's compilers have a plethora of optimizations to choose from, and the correct choice of optimizations can have a significant impact on the performance of the code being optimized. Furthermore, choosing the correct order in which to apply those optimizations has been a long standing problem in compilation research. Each of these optimizations interacts with the code and in turn with all other optimizations in complicated ways. Traditional compilers typically apply the same set of optimization in a fixed order to all functions in a program, without regard the code being optimized.Understanding the interactions of optimizations is very important in determining a good solution to the phase-ordering problem. This paper develops a new approach that automatically selects good optimization orderings on a per method basis within a dynamic compiler. Our approach formulates the phase-ordering problem as a Markov process and uses a characterization of the current state of the code being optimized to creating a better solution to the phase ordering problem. Our technique uses neuro-evolution to construct an artificial neural network that is capable of predicting beneficial optimization ordering for a piece of code that is being optimized. We implemented our technique in Jikes RVM and achieved significant improvements on a set of standard Java benchmarks over a well-engineered fixed order.},
+  journal = {SIGPLAN Not.},
+  month = oct,
+  pages = {147-162},
+  numpages = {16},
+  keywords = {source code feature generation, phase ordering, neural networks, machine learning, jikes rvm, java, compiler optimization}
+}
+
+@online{jcc,
+  author    = "Brandon Kirincich",
+  title     = "Just a C Compiler",
+  url       = "https://github.com/BrandonKi/jcc/tree/main",
+}
+
+@inproceedings{ssadecon,
+  author="Sreedhar, Vugranam C. and Ju, Roy Dz-Ching and Gillies, David M. and Santhanam, Vatsa",
+  editor="Cortesi, Agostino and Fil{\'e}, Gilberto",
+  title="Translating Out of Static Single Assignment Form",
+  booktitle="Static Analysis",
+  year="1999",
+  publisher="Springer Berlin Heidelberg",
+  address="Berlin, Heidelberg",
+  pages="194--210",
+  abstract="Programs represented in Static Single Assignment (SSA) form contain phi instructions (or functions) whose operational semantics are to merge values coming from distinct control flow paths. However, translating phi instructions into native instructions is nontrivial when transformations such as copy propagation and code motion have been performed. In this paper we present a new framework for translating out of SSA form. By appropriately placing copy instructions, we ensure that none of the resources in a phi congruence class interfere. Within our framework, we propose three methods for copy placement. The first method pessimistically places copies for all operands of phi instructions. The second method uses an interference graph to guide copy placement. The third method uses both data flow liveness sets and an interference graph to guide copy placement. We also present a new SSA-based coalescing method that can selectively remove redundant copy instructions with interfering operands. Our experimental results indicate that the third method results in 35{\%} fewer copy instructions than the second method. Compared to the first method, the third method, on average, inserts 89.9{\%} fewer copies during copy placement and runs 15{\%} faster, which are significant reductions in compilation time and space.",
+  isbn="978-3-540-48294-9"
+}
+
+@inproceedings{intervalsplitting,
+  author = {Wimmer, Christian and Mössenböck, Hanspeter},
+  year = {2005},
+  month = {06},
+  pages = {132-141},
+  title = {Optimized interval splitting in a linear scan register allocator},
+  journal = {Proceedings of the First ACM/USENIX International Conference on Virual Execution Environments, VEE 05},
+  doi = {10.1145/1064979.1064998}
+}
+
+@inproceedings{lsrossa,
+  author = {Wimmer, Christian and Franz, Michael},
+  title = {Linear scan register allocation on SSA form},
+  year = {2010},
+  isbn = {9781605586359},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/1772954.1772979},
+  doi = {10.1145/1772954.1772979},
+  abstract = {The linear scan algorithm for register allocation provides a good register assignment with a low compilation overhead and is thus frequently used for just-in-time compilers. Although most of these compilers use static single assignment (SSA) form, the algorithm has not yet been applied on SSA form, i.e., SSA form is usually deconstructed before register allocation. However, the structural properties of SSA form can be used to simplify the algorithm.With only one definition per variable, lifetime intervals (the main data structure) can be constructed without data flow analysis. During allocation, some tests of interval intersection can be skipped because SSA form guarantees non-intersection. Finally, deconstruction of SSA form after register allocation can be integrated into the resolution phase of the register allocator without much additional code.We modified the linear scan register allocator of the Java HotSpot client compiler so that it operates on SSA form. The evaluation shows that our simpler and faster version generates equally good or slightly better machine code.},
+  booktitle = {Proceedings of the 8th Annual IEEE/ACM International Symposium on Code Generation and Optimization},
+  pages = {170-179},
+  numpages = {10},
+  keywords = {Java, SSA form, SSA form deconstruction, just-in-time compilation, lifetime analysis, linear scan, register allocation},
+  location = {Toronto, Ontario, Canada},
+  series = {CGO '10}
+}
+
+@online{inlinewiki,
+  author    = "",
+  title     = "Inline Expansion",
+  url       = "https://en.wikipedia.org/wiki/Inline_expansion",
+}
+
+@online{knuthwebsite,
+  author    = "Donald Knuth",
+  title     = "Knuth: Computers and Typesetting",
+  url       = "http://www-cs-faculty.stanford.edu/~uno/abcde.html",
+}
