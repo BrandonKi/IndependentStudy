@@ -50,7 +50,8 @@
         \Large{Rochester Institite of Technology}
         }
     \author{\Large{Brandon Kirincich}}
-    \date{\large{\today}}
+    \date{\large{December 15, 2024}}
+    % \date{\large{\today}}
 
     \maketitle
 \end{titlepage}
@@ -1464,7 +1465,10 @@ First, I added support for more instructions in the x86\_64 backend.
   \end{tabular}
 \end{table}
 
-After that I started work on frontend support for arrays with the goal of being able to successfully compile/run the N-Queens solver below. My initial strategy for array support was to desugar the array operation into pointer arithmetic during parse time, which I thought would be a quick change. However, after implementing that, I realized that LLVM expects array operations to use a special GetElementPointer(GEP) instruction, so the "correct" way to implement array operations would be to keep them around explicitly in the AST for longer. After finishing the LLVM implementation I will then move into the JB one.
+After that I started work on frontend support for arrays with the goal of being able to successfully compile/run the N-Queens solver below.
+My initial strategy for array support was to desugar the array operation into pointer arithmetic during parse time, which I thought would be a quick change.
+However, after implementing that, I realized that LLVM expects array operations to use a special GetElementPointer(GEP) instruction, so the "correct" way to implement array operations would be to keep them around explicitly in the AST for longer.
+After finishing the LLVM implementation I will then move onto the JB one.
 
 \begin{lstlisting}
   #include <stdbool.h>
